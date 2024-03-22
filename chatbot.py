@@ -7,7 +7,7 @@ messages = [{"role": "system", "content": "You are a personal assistant"}]
 
 def CustomGPT(user_input):
     messages.append({"role": "user", "content":user_input})
-    response = openai.ChatCompletion.create(
+    response = openai.chat.completions.create(
         model = "gpt-3.5-turbo",
         messages = messages
     )
